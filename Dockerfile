@@ -1,4 +1,4 @@
-ARG wg_go_tag=0.0.20230223
+#ARG wg_go_tag=0.0.20230223
 
 # Use a small base image (Alpine)
 FROM alpine:latest
@@ -17,7 +17,7 @@ RUN git clone https://github.com/WireGuard/wireguard-go.git /tmp/wireguard-go
 
 # Build wireguard-go from source
 RUN cd /tmp/wireguard-go && \
-    git checkout $wg_go_tag && \
+#    git checkout $wg_go_tag && \
     make && \
     mv /tmp/wireguard-go/wireguard-go /usr/local/bin/ && \
     rm -rf /tmp/wireguard-go

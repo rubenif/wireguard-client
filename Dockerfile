@@ -27,4 +27,5 @@ RUN cd /tmp/wireguard-go && \
 RUN mkdir -p /etc/wireguard /etc/wireguard/config
 
 # Set the entrypoint to run wireguard-go with the wg0 interface
-ENTRYPOINT ["/usr/local/bin/wireguard-go", "wg0"]
+#ENTRYPOINT ["/usr/local/bin/wireguard-go", "wg0"]
+ENTRYPOINT ["/bin/sh"]

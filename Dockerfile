@@ -10,6 +10,7 @@ RUN apk update && apk add --no-cache \
     linux-headers \
     iproute2 \
     iputils \
+    go \
     && rm -rf /var/cache/apk/*
 
 # Clone the wireguard-go repository from GitHub
